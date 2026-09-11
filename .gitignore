@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Builds
+client/dist/
+dist/
+
+# Environment secrets (never commit real credentials)
+.env
+.env.local
+.env.*.local
+server/.env
+client/.env
+
+# Runtime data (file-store fallback acts as the local database)
+server/data/
+*.json.seed
+
+# Logs & OS junk
+*.log
+*.pid
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Editor & workspace metadata
+.vscode/
+.idea/
+.freebuff/

@@ -1,0 +1,15 @@
+{
+  "name": "pragadish-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack personal portfolio for Pragadish V — React + Vite client, Express + MongoDB server.",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build:client": "npm --prefix client run build",
+    "start": "npm --prefix server start"
+  },
+  "keywords": ["portfolio", "full-stack", "react", "express", "mongodb"],
+  "license": "MIT"
+}
