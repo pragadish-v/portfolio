@@ -1,0 +1,27 @@
+# Render Blueprint - deploys the Express API as a free web service.
+# Render Dashboard -> New + -> Blueprint -> select this repo.
+# You'll be prompted for the sync:false values (Mongo URI, admin password, CORS).
+services:
+  - type: web
+    name: pragadish-portfolio-api
+    runtime: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false        # paste your Atlas connection string
+      - key: JWT_SECRET
+        generateValue: true  # Render creates a strong random secret
+      - key: JWT_EXPIRES_IN
+        value: 1d
+      - key: ADMIN_USERNAME
+        value: pragadish
+      - key: ADMIN_PASSWORD
+        sync: false        # choose a strong password (bootstrap admin)
+      - key: CORS_ORIGIN
+        sync: false        # your Vercel URL, e.g. https://portfolio-xyz.vercel.app
