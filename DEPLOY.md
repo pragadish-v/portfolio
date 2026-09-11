@@ -2,6 +2,14 @@
 
 Condensed click-by-click version of the full guide in README.md.
 
+## Already live: GitHub Pages (frontend only)
+
+The site auto-deploys to **https://pragadish-v.github.io/portfolio/** on every
+push to `main` via `.github/workflows/pages.yml`. Pages source must stay set
+to **GitHub Actions** (Settings -> Pages). This deployment uses the bundled
+fallback content; the contact form needs the backend, so follow the steps
+below for the full experience.
+
 ## 0. Prereqs
 - Repo pushed: https://github.com/pragadish-v/portfolio (done)
 - Free accounts: mongodb.com/atlas, render.com, vercel.com (sign in with GitHub)
